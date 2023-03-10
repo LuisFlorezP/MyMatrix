@@ -142,5 +142,58 @@ namespace Matrix.Logic
             }
             return output;
         }
+
+        public string GetMainDiagonal2()
+        {
+            if (!IsSquared)
+            {
+                throw new Exception("The matrix is not squared");
+            }
+
+            string mensaje = string.Empty;
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    if (i == j)
+                    {
+                        mensaje += _matrix[i, j] + "\t";
+                    } else
+                    {
+                        mensaje += "\t";
+                    }
+                }
+                mensaje += "\n";
+            }
+
+            return mensaje;
+        }
+
+        public string GetSecondaryDiagonal2()
+        {
+            if (!IsSquared)
+            {
+                throw new Exception("The matrix is not squared");
+            }
+
+            string mensaje = string.Empty;
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    if (j == N - i - 1)
+                    {
+                        mensaje += _matrix[i, j] + "\t";
+                    }
+                    else
+                    {
+                        mensaje += "\t";
+                    }
+                }
+                mensaje += "\n";
+            }
+
+            return mensaje;
+        }
     }
 }

@@ -15,3 +15,7 @@ Console.WriteLine("*** Upper Triangular ***");
 Console.WriteLine(myMatrix.GetUpperTriangular());
 Console.WriteLine("*** Lower Triangular ***");
 Console.WriteLine(myMatrix.GetLowerTriangular());
+Console.WriteLine("*** Main Diagonal ***");
+Console.WriteLine(myMatrix.GetMainDiagonal2());
+Console.WriteLine("*** Secondary Diagonal ***");
+Console.WriteLine(myMatrix.GetSecondaryDiagonal2());
